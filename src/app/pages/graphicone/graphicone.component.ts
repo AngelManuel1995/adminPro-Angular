@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 
 @Component({
-    selector:'graphicone-app',
+    selector:'app-graphicone',
     templateUrl:'./nopagefound.component.html'
 })
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 
 @Component({
-    selector:'progress-app',
+    selector:'app-progress',
     templateUrl:'./progess.component.html'
 })
 
