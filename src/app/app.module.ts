@@ -13,11 +13,16 @@ import { BreadCrumbsComponent, } from './shared/breadcrumbs/breadcrumbs.componen
 import { HeaderComponent, } from './shared/header/header.component'
 import { NopageFoundComponent, } from './shared/nopagefound/nopagefound.component'
 import { SidebarComponent, } from './shared/sidebar/sidebar.component'
+import { DashboardComponent } from './pages/dashboard/dashboars.component'
 
 /** Importación de los servicios */
 
 import { SharedService, } from './services/shared/shared.service'
 import { SidebarService, } from './services/sidebar/sidebar.service'
+
+/** Importación de las rutas */
+
+import { APP_ROUTES } from './app.roures'
 
 @NgModule({
   declarations: [
@@ -28,10 +33,12 @@ import { SidebarService, } from './services/sidebar/sidebar.service'
     BreadCrumbsComponent,
     HeaderComponent,
     NopageFoundComponent,
-    SidebarComponent
+    SidebarComponent,
+    DashboardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    APP_ROUTES
   ],
   providers: [
     SharedService,
