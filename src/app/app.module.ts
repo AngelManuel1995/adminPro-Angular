@@ -23,7 +23,7 @@ import { SidebarService, } from './services/sidebar/sidebar.service'
 
 /** Importación de las rutas */
 
-import { APP_ROUTES } from './app.roures'
+import { APP_ROUTES } from './app.routes'
 
 @NgModule({
   declarations: [
