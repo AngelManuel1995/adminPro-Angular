@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { PagesComponent } from "./pages/pages.component"
 import { LoginComponent, } from './login/login.component'
 import { GraphicOneComponent, } from './pages/graphicone/graphicone.component'
-import { ProgressComponent, } from './pages/progress/progess.component'
 import { BreadCrumbsComponent, } from './shared/breadcrumbs/breadcrumbs.component'
 import { HeaderComponent, } from './shared/header/header.component'
 import { NopageFoundComponent, } from './shared/nopagefound/nopagefound.component'
@@ -23,6 +22,8 @@ import { SidebarService, } from './services/sidebar/sidebar.service'
 
 /** Importación de las rutas */
 
+import { PagesModule } from './pages/pages.module'
+
 import { APP_ROUTES } from './app.routes'
 
 @NgModule({
@@ -31,7 +32,6 @@ import { APP_ROUTES } from './app.routes'
     PagesComponent,
     LoginComponent,
     GraphicOneComponent,
-    ProgressComponent,
     BreadCrumbsComponent,
     HeaderComponent,
     NopageFoundComponent,
@@ -41,7 +41,8 @@ import { APP_ROUTES } from './app.routes'
   ],
   imports: [
     BrowserModule,
-    APP_ROUTES
+    APP_ROUTES,
+    PagesModule
   ],
   providers: [
     SharedService,
