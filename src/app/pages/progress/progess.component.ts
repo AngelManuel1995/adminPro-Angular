@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core'
 
 export class ProgressComponent implements OnInit{
     
-    progreso:number = 5
+    azul:string = "Incrementador azul"
+    verde:string = "Incrementador verde"
+    progreso1:any = 10
+    progreso2:any = 20
 
     constructor(){
 
@@ -15,16 +18,5 @@ export class ProgressComponent implements OnInit{
 
     ngOnInit(){
 
-    }
-
-    cambiarValor(valor:number){
-        
-        this.progreso = this.progreso + valor
-        if(this.progreso > 100){
-            this.progreso = 100
-        }
-        if(this.progreso < 0){
-            this.progreso = 0
-        }
     }
 }

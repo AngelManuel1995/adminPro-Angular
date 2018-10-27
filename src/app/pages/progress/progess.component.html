@@ -4,7 +4,10 @@
             <div class="card-body">
                 <h4 class="card-title">Barra de progreso</h4>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.ariaValuenow]="progreso" [attr.ariaValuemin]="0" [attr.ariaValuemax]="100" [style.width]="progreso + '%'"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.ariaValuenow]="progreso" [attr.ariaValuemin]="0" [attr.ariaValuemax]="100" [style.width]="progreso1 + '%'"></div>
+                </div><br>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.ariaValuenow]="progreso" [attr.ariaValuemin]="0" [attr.ariaValuemax]="100" [style.width]="progreso2 + '%'"></div>
                 </div>
             </div>
         </div>
@@ -14,26 +17,14 @@
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                <div class="input-group">
-                    <span class="input-group-btn">
-                        <button (click)="cambiarValor(-2)" class="btn btn-primary" type="button">
-                            <i class="mdi mdi-minus"></i>
-                        </button>
-                    </span>
-                    <input type="text" name="progreso" [(ngModel)]="progreso" class="form-control">
-                    <span class="input-group-btn">
-                        <button (click)="cambiarValor(2)" class="btn btn-primary" type="button">
-                            <i class="mdi mdi-plus"></i>
-                        </button>
-                    </span>
-                </div>
+                <app-incrementador (cambiarValorEvent)="progreso1 = $event" [leyenda]="azul" [progreso]="progreso1"></app-incrementador>
             </div>
         </div>
     </div>
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Texto 2</h4>
+              <app-incrementador (cambiarValorEvent)="progreso2 = $event" [leyenda]="verde" [progreso]="progreso2"></app-incrementador>
             </div>
         </div>
     </div>
