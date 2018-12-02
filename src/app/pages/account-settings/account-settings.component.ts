@@ -7,9 +7,7 @@ import { DOCUMENT } from '@angular/platform-browser'
 })
 
 export class AccountSettingsComponent implements OnInit{
-    constructor(@Inject(DOCUMENT) private _document){
-
-    }
+    constructor(@Inject(DOCUMENT) private _document){}
     ngOnInit(){
 
     }

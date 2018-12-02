@@ -31,10 +31,7 @@ export class IncrementadorComponent{
 
     onChanges(event){
         this.cambiarValorEvent.emit(event)
-
-        /** Validar el progreso que entra */
-
-        this.txtProgreso.nativeElement.value = event;
+        this.txtProgreso.nativeElement.value = event
     }
 
 }
