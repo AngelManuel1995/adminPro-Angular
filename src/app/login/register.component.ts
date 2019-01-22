@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core"
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import * as swal  from 'sweetalert'
+import { UsuariosService } from '../services/service.index'
+import { Usuario } from "../models/usuario.model";
 @Component({
     selector:'app-register',
     templateUrl:'./register.component.html',
@@ -11,7 +13,7 @@ export class RegisterComponent implements OnInit{
     
     forma: FormGroup
 
-    constructor(){
+    constructor(public _usuariosService:UsuariosService){
 
     }
 
@@ -51,7 +53,10 @@ export class RegisterComponent implements OnInit{
             swal('Importante', 'Debe aceptar los terminos y condiciones', 'warning')
             return
         }
-        console.log(this.forma.value)
-        console.log(this.forma.valid)
+
+        let usuario = new Usuario(this.forma.value.nombre, this.forma.value.correo, this.forma.value.password)
+        this._usuariosService.crearUsuario(usuario).subscribe( data => {
+           console.log(data) 
+        })
     }
 }
